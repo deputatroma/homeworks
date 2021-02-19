@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$font-family: "Roboto", serif, sans-serif;
+$color-main: #4E4E4E;
+$color-post-comments: #7C7C7C;
+$color-post-text: #5C5C5C;
+$color-footer-container: #B9B9B9;
+$color-footer-title: #FEFEFE;
+$background-color-footer: #000000;
+$text-transform: uppercase;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+$width-fullscreen-img: 100%;
+$align-items-center: center;
+@mixin screen-xxl-center () {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+@mixin screen-xl-center () {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+@mixin flexible () {
+    display: flex;
+    justify-content: center;
+    align-items: $align-items-center; 
+}
+@mixin text-property () {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: $text-transform;
+}
+@mixin grid-center-center () {
+    display: grid;
+    justify-items: center;
+    align-items: $align-items-center;    
+}
+@mixin footer-text--down-property () {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0 20px 70px 20px;
+}
+
+body {
+    @include screen-xxl-center ();
+    font-family: $font-family;
+    font-weight: $font-weight-medium;
+    color: $color-main;
+    padding: 0 10px;
+}
+.main-img {
+    @include screen-xl-center ();
+    & img {
+        width: $width-fullscreen-img;
+    }
+}
+.post {
+    @include screen-xl-center ();    
+    @include grid-center-center ();
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+
+    padding-bottom: 7px;
+    &__title {
+        @include screen-xl-center ();
+        @include text-property ();
+        padding: 66px 0 24px 0;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        &--img {
+            grid-column-end: span 1;
+            width: $width-fullscreen-img;
+            & {
+                .shots-img--item {
+                    width: $width-fullscreen-img;
+                }
+            }
+        }
+        &--content {
+            grid-column-start: span 2;
+            padding-left: 20px;
+        }
+        &--title {
+            font-size: 16px;
+            line-height: 30px;
+            font-weight: $font-weight-bold;
+            padding-right: 10px;
+        }
+        &--comments {
+            color: $color-post-comments;
+            font-size: 12px;
+            line-height: 20px;
+            padding-right: 10px;
+        }
+        &--text {
+            color: $color-post-text;
+            font-size: 14px;
+            line-height: 26px;
+            padding-right: 10px;
+        }        
+    }
+}
+.padding-bottom {
+    height: 57px;
+}
+.shots {
+    background-color: rgba(0, 0, 0, .03);
+    margin: 0 -10px;
+    &__title {
+        @include screen-xl-center ();     
+        @include text-property ();           
+        display: flex;
+        justify-content: space-between;
+        padding: 47px 0 24px 0;
+            &--one {
+                @include text-property ();
+                padding-left: 10px;
+            }
+            &--second {
+                @include text-property ();
+                font-size: 13px;
+                padding-right: 10px;
+            }
+    }
+    &__img {
+        @include screen-xl-center ();        
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 10px;
+        padding: 0 10px 50px 10px;
+        &--item {
+        width: $width-fullscreen-img;
+        }        
+    }
+}
+.footer {
+    @include flexible ();
+    font-family: $font-family;
+    background-color: $background-color-footer;
+    margin: 0 -10px;
+    &__container {
+        @include grid-center-center ();       
+        grid-template-columns: repeat(1, 1fr);
+
+        color: $color-footer-container;
+        width: 700px;
+        margin: 0 10px;
+    }
+    &__title {
+        @include text-property ();
+        color: #FEFEFE;
+        padding: 66px 0 22px 0;
+    }
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 28px;
+        padding:  0 20px;
+    }
+    &__icon {
+        @include flexible ();
+        & a {
+            padding: 37px 0 34px 0;
+            margin-right: 6px;
+            &:last-child{
+                margin-right: 0;
+            } 
+        }        
+    }
+    &__text--down {
+        @include footer-text--down-property ();
+        &--small {
+            @include footer-text--down-property ();
+            display: none;
+        }        
+    }
+}

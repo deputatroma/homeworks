@@ -1,0 +1,24 @@
+{
+  "name": "project-x",
+  "version": "1.0.0",
+  "description": "Roman Kovalchuk, FE24",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deputatroma/git-json.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Roman Kovalchuk",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.19.0",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "moment": "^2.29.1"
+  }
+}
