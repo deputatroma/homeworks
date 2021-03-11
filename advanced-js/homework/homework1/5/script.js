@@ -18,6 +18,6 @@ const bookToAdd = {
   author: "George R. R. Martin",
 };
 
-const newBookToAdd = [...books, {...bookToAdd}]
+const [...newBookToAdd] = [...books, {...bookToAdd}]
 
 console.log(newBookToAdd);

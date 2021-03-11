@@ -29,6 +29,6 @@ const satoshi2018 = {
   birth: "1975-04-05",
 };
 
-const fullProfile = {...satoshi2018,...satoshi2019,...satoshi2020};
+const {...fullProfile} = {...satoshi2018,...satoshi2019,...satoshi2020};
 
 console.log(fullProfile);
