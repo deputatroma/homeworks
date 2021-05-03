@@ -1,0 +1,28 @@
+.btn {
+    min-width: 220px;
+    min-height: 40px;
+    display: inline-block;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 7px 15px;
+    line-height: 1.5;
+    border-radius: 10px;
+    margin: 15px;
+    outline: none;
+
+    &-delete,
+    &-delete-modal {
+        background-color: crimson;
+        cursor: pointer;
+    }
+
+    &-confirm,
+    &-confirm-modal {
+        background-color: forestGreen;
+        cursor: pointer;
+    }
+}
