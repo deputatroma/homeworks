@@ -1,0 +1,25 @@
+@import '../global/variables.scss';
+
+.btn {
+    font-family: $font-btn;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 90px;
+    display: inline-block;
+    color: $btn;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 16px;
+    line-height: 1.75;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.btn-modal {
+    margin: 10px;
+}

@@ -1,0 +1,80 @@
+@import '../global/variables.scss';
+
+p {
+    padding-top: 15px;
+}
+
+.Product {
+    width: 287px;
+    height: 100%;
+    margin: 16px;
+    color: $productColor;
+    background-color: $backgroundColor;
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 3px 7px 0px $productColorHover;
+    transition: 0.3s linear;
+
+    &:hover {
+        transform: scale(1.05);
+}    
+
+    &__NameAlbums {
+        font-weight: 500;
+        font-size: 17px;
+    }
+
+    &__Author {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__Img {
+        height: 200px;
+        object-fit: cover;
+        width: 90%;
+        display: block;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__Btn {
+        width: 23px;
+        height: 23px;
+        padding: 0;
+        display: inline-block;
+        background-color: $btn;
+        border: none;
+        outline: none;
+    }
+
+    &__Type {
+        font-size: 14px;
+        margin-right: 7px;
+    }
+
+    &__Price {
+        font-size: 21px;
+        font-weight: 700;
+        color: $price;
+    }
+
+    &__Сurrency {
+        font-size: 16px;
+    }
+
+    &__Discount {
+        font-size: 14px;
+        color: $discount;
+        text-decoration: line-through;
+    }  
+
+    &t__id {
+        font-size: 12px;
+    }  
+}
