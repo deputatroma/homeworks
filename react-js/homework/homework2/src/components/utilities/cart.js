@@ -1,7 +1,3 @@
-/**
- * @param {string} itemId
- */
-
 function addToCart(itemId) {
 
     const cart = JSON.parse(localStorage.getItem('cardList')) || {};

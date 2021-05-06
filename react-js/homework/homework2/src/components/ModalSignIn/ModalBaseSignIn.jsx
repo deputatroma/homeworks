@@ -1,21 +1,39 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Button from '../Button/Button';
-import './ModalBase.scss';
+import '../ModalBase/ModalBase.scss';
+import './sign-in.styles.scss';
+import FormInput from './form-input.component'
+import SubmitButton from './submit-button.component'
 
-class ModalBase extends Component {
+class ModalBaseSignIn extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+        email: '',
+        password: ''
+    }
+}
+
+handleSubmit = event => {
+    event.preventDefault();
+    this.setState({ email: '', password: '' });
+}
+
+handleChange = (event) => {
+    const { value, name } = event.target;
+    this.setState({ [name]: value });
+}
+
   render() {
     const {
       header,
-      text,
-      textConfirm,
       bgColorHeader,
       bgColorBody,
       bgColorFooter,
       closeButton,
-      bgInfo,
-      onClose,
-      onConfirm
+      onClose
     } = this.props;
 
     return (
@@ -42,32 +60,22 @@ class ModalBase extends Component {
             }
           </div>
           <div
+            
             className="modal-body"
             style={{ backgroundColor: bgColorBody }}
           >
-            <p className="text-modal">
-              {text}
-            </p>
-            <p>
-              {textConfirm}
-            </p>
+            <form onSubmit={this.handleSubmit} className="sign-in">
+              <FormInput name='email' type='email' value={this.state.email} required handleChange={this.handleChange} label='username or email' />
+              <FormInput name='password' type='password' value={this.state.password} required handleChange={this.handleChange} label='password' />
+            </form>
           </div>
           <div
             className="modal-footer"
             style={{ backgroundColor: bgColorFooter }}
           >
-            <Button
-              onClick={onClose}
-              className="btn btn-modal"
-              text='No'
-              style={{ backgroundColor: bgInfo }}
-            />
-            <Button
-              onClick={onConfirm}
-              className="btn btn-modal"
-              text='Yes'
-              style={{ backgroundColor: bgInfo }}
-            />
+            <form onSubmit={this.handleSubmit}>
+              <SubmitButton onClick={onClose} type='submit'>Login</SubmitButton>
+            </form>
           </div>
         </div>
       </div>
@@ -75,18 +83,14 @@ class ModalBase extends Component {
   }
 }
 
-export default ModalBase;
+export default ModalBaseSignIn;
 
-ModalBase.propTypes = {
+ModalBaseSignIn.propTypes = {
 
   header: PropTypes.string,
-  text: PropTypes.string,
-  textConfirm: PropTypes.string,
   bgColorHeader: PropTypes.string,
   bgColorBody: PropTypes.string,
   bgColorFooter: PropTypes.string,
   closeButton: PropTypes.bool,
-  bgInfo: PropTypes.string,
   onClose: PropTypes.func,
-  onConfirm: PropTypes.func
 }

@@ -10,7 +10,6 @@ class Product extends Component {
 
   constructor(props) {
     super(props)
-
     this.state = {
       colorSVG: isFavorite(props.product.id) ? star_fill : star
     }
@@ -79,7 +78,7 @@ class Product extends Component {
             text="Add to cart"
             style={{ backgroundColor: "green" }}
           />
-
+          
         </div>
       </div>
     )

@@ -1,5 +1,6 @@
 .vscode
 .eslintcache
+.github/workflows
 
 /node_modules
 /.pnp

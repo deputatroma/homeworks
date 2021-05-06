@@ -7,7 +7,6 @@ import addToCart from "../utilities/cart.js";
 
 class ProductList extends Component {
 
-
   constructor(props) {
     super(props)
 
@@ -29,7 +28,6 @@ class ProductList extends Component {
     addToCart(this.state.modalProductId);
     this.handleModalClose();
   }
-
 
   render() {
     return (

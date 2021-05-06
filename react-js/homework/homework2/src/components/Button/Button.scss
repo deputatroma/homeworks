@@ -4,9 +4,10 @@
     font-family: $font-btn;
     font-size: 14px;
     font-weight: 600;
-    min-width: 90px;
+    min-width: 130px;
     display: inline-block;
-    color: $btn;
+    color: $main-color;
+    background-color: $btnBackgroundColor;
     text-align: center;
     border: 1px solid transparent;
     padding: 6px 16px;

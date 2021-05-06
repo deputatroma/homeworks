@@ -48,7 +48,7 @@ p {
         height: 23px;
         padding: 0;
         display: inline-block;
-        background-color: $btn;
+        background-color: $main-color;
         border: none;
         outline: none;
     }
@@ -70,7 +70,7 @@ p {
 
     &__Discount {
         font-size: 14px;
-        color: $discount;
+        color: $sub-color;
         text-decoration: line-through;
     }  
 
