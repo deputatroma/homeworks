@@ -14,7 +14,7 @@ class ModalAddCart extends Component {
         bgColorFooter="mediumSeaGreen"
         bgInfo="forestGreen"
         onClose={this.props.onClose}
-        onConfirm={this.props.onConfirm} 
+        onConfirm={this.props.onConfirm}
       />
     )
   }
