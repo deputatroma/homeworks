@@ -1,0 +1,47 @@
+@import '../global/fonts.scss';
+@import '../global/variables.scss';
+
+.Menu {
+   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+   background-color: $main-color;
+   position: relative;
+   align-items: center;
+   min-height: 24px;
+   top: 0;
+   left: auto;
+   position: fixed;
+   width: 100%;
+   z-index: 99;
+   box-sizing: border-box;
+}
+
+.MenuItems {
+   font-family: $font-heder-title;
+   font-size: 24px;
+   color: red;
+   transition: 0.3s linear;
+
+   &:hover, &:focus, &:active {
+      color: green;
+      fill: green;
+   }
+}
+
+@media (max-width: 725px) {
+   .Menu {
+      top: 90px;
+   }
+   .MenuItems {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+}
+
+@media (max-width: 395px) {
+   .Menu {
+      top: 150px;
+   }
+}
