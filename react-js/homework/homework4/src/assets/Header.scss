@@ -1,0 +1,36 @@
+@import './fonts.scss';
+@import './variables.scss';
+
+.headerStyled {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24px;
+    padding-right: 24px;
+    background-color: $main-color;
+    position: relative;
+    align-items: center;
+    min-height: 130px;
+    top: 0;
+    left: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    box-sizing: border-box;
+
+    &__Heading {
+        font-family: $font-heder-title;
+        font-size: 50px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+        color: $title;
+    }    
+}
+
+@media (max-width: 725px) {
+    .headerStyled {
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
+    }
+}

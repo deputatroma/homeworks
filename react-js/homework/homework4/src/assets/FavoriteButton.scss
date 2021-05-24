@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.Favorite__Btn {
+    width: 25px;
+    height: 25px;
+    padding-left: 10px;
+    display: inline-block;
+    background-color: $backgroundColor;
+    border: none;
+}
