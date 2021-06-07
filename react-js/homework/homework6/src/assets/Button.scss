@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+.btn {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 130px;
+    display: inline-block;
+    color: $main-color;
+    background-color: $btnBackgroundColor;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 16px;
+    line-height: 1.75;
+    margin: 0 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s linear;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &-modal {
+        margin: 10px;
+    }    
+}

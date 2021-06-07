@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+.formField {
+    width: 250px;
+    font-size: 18px;
+    margin-top: 5px;
+    padding-right: 5px;
+}
+
+.error {
+    color: $error;
+}
+
+.containerAll {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerInput,
+.delivery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;  
+}
+
+@media (max-width: 475px) {
+    .formField {
+        width: 280px;
+    }
+    .containerAll {
+        flex-direction: column;
+    }
+}
